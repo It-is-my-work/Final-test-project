@@ -27,10 +27,12 @@ class ProductPage(BasePage):
         assert product_price == adding_message, f"{product_price} not in adding message"
 
     def should_element_is_disappeared(self):
-        assert self.is_disappeared(*ProductPageLocators.ADDING_MESSAGE_NAME), "Element is presented, but should be disappeard"
+        assert self.is_disappeared(*ProductPageLocators.ADDING_MESSAGE_NAME), \
+            "Element is presented, but should be disappeard"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.ADDING_MESSAGE_NAME), "Success message is presented, but should not be"
+        assert self.is_not_element_present(*ProductPageLocators.ADDING_MESSAGE_NAME), \
+            "Success message is presented, but should not be"
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert

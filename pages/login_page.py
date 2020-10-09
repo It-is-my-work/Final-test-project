@@ -12,7 +12,6 @@ class LoginPage(BasePage):
         registration_button = self.find_element(*LoginPageLocators.REGISTRATION_BUTTON)
         registration_button.click()
 
-
     def should_be_login_url(self):
         login_url = self.browser.current_url
         part_url = "login"
